@@ -1,5 +1,5 @@
 var path = require('path');
-var webpack = require('webpack');
+var webapck = require('webpack');
 
 module.exports = {
 	entry:[
@@ -9,9 +9,9 @@ module.exports = {
 	],
 
 	output:{
-		publicPath: 'dist',
-		filename: 'main.js',
-		path: './dist'
+		publicPath: '/',
+		filename: 'bundle.js',
+		path: path.join(__dirname, 'dist')
 	},
 
 	devServer: {
@@ -23,7 +23,7 @@ module.exports = {
 	module: {
 	  loaders: [
 	    {
-	      loader:"babel-loader",
+	      loader: "babel-loader",
 
 	      // Skip any files outside of your project's `src` directory
 	      include: [
